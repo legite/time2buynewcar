@@ -18,4 +18,4 @@ class maintain(object):
 
 
 def datenum(str1, str2):
-    return [0, 0, 0]
+    return [0, 0]
