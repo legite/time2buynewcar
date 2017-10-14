@@ -1,6 +1,6 @@
 
 #定义字符串转换类
-class Str2Info(object):
+class Str2Car(object):
 
     def __init__(self, str):
         ss = str.split('|')
