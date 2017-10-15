@@ -53,7 +53,7 @@ class test_manager(unittest.TestCase):
         self.assertEqual(m.Text[3][cars[2].brand][0], 1)
 
         self.assertIn(cars[3].brand, m.Text[0])
-        self.assertEqual(cars[3].id, m.Text[0][cars[0].brand][1])
+        self.assertEqual(cars[3].id, m.Text[0][cars[3].brand][1])
         self.assertEqual(m.Text[0][cars[3].brand][0], 1)
 
 
