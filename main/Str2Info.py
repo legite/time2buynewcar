@@ -1,6 +1,7 @@
 import datetime
 
-STD = {True:[365 * 3, 3, 3], False:[365 *6, 12, 6]}                      # 寿命及定期保养标准
+STD = {True:[365 * 3, 3, 3], False:[365 * 6, 12, 6]}                      # 寿命及定期保养标准
+
 
 # 定义字符串转车辆类
 class Str2Car(object):

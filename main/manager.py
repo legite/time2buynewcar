@@ -1,6 +1,7 @@
 
+
 # 汽车信息管理类
-class manage(object):
+class Manage(object):
     __slots__ = ('list', 'date', 'Info', 'Text')
 
     # 初始化管理对象： 汽车信息列表list，
