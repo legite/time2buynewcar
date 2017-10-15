@@ -12,10 +12,11 @@
 ### 功能实现
 
 - **/main/Str2Info.py** </br>
- 主要实现将输入的车辆信息字符串转换为车辆信息的类，例如：‘CAR00001|2034/08/09|BYD|9800|F’——id|Date|brand|dis|fix(编号|购买日期|品牌|行驶距离|是否大修)。实现功能：对车辆信息进行分类（**reminder**）
+ 主要实现将输入的车辆信息字符串转换为车辆信息的类，例如：‘CAR00001|2034/08/09|BYD|9800|F’——id|Date|brand|dis|fix(编号|购买日期|品牌|行驶距离|是否大修)。实现功能：对车辆信息进行分类（**reminder**），__**分类 = {0：即将报废 ， 1：距离保养 ， 2：定期保养 ， 3：正常或已报废}**__
 
 - **/main/manager.py** </br>
  主要对车辆信息进行管理的类，对汽车信息列表进行更深一层处理，主要功能有：保养报废情况统计（**count**），保养报废情况整理(**sort**)，保养报废情况展(**show**)示等
+
  - **/main/buynewcar.py** </br>
  主程序，运行**buynewcar**，可以使用系统功能
 
@@ -31,7 +32,7 @@
 ### **方法1**
 > 进入工程的main目录中，右键打开终端，输入：
 ``` shell
-python3 fixer.py
+python3 buynewcar.py
 ```
 > 然后将测试用例输入，并回车（两次）：
 ```
@@ -69,6 +70,4 @@ Ford: 1 (CAR0009)
 ### **方法2**
 > 使用pycharm打开该工程，使用**ctrl**+**shift**+**f10**运行工程，然后在IDE的运行端中进行输入，同方法1
 
-
-
-[github地址](https://github.com/legite/time2buynewcar "thoughtworks homework")
+## [github地址](https://github.com/legite/time2buynewcar "thoughtworks homework")
