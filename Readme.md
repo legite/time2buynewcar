@@ -6,7 +6,7 @@
 
  [TOC]
 
-## **系统简介**(**time2buynewcar**)
+## **系统简介(time2buynewcar)**
 > 本系统旨在帮助出租车公司解决车辆保养以及报废情况的统计与提醒问题,本系统分为功能实现部分和测试部分。本系统实现的功能：通过输入提醒日期和车辆信息，通过内部计算判断，将保养及报废情况输出
 
 ### 功能实现
@@ -29,12 +29,14 @@
 
 
 ## **系统运行说明**
-### **方法1**
-> 进入工程的main目录中，右键打开终端，输入：
-``` shell
-python3 buynewcar.py
-```
-> 然后将测试用例输入，并回车（两次）：
+### 使用Pycharm
+> 1.使用pycharm打开该工程（**time2buynewcar**）
+
+> 2.打开 **/main/buynewcar.py**
+
+> 3.使用 **ctrl** + **shift** + **f10**运行该文件，或右键该文件选择 **Run buynewcar**
+
+> 4.然后在pycharm的控制台中进行输入，如下：
 ```
 SubmitDate: 2030/09/01
 CAR0001|2025/04/05|Porsche|10000|F
@@ -48,7 +50,7 @@ CAR0008|2027/07/10|Ford|15000|T
 CAR0009|2024/10/22|Ford|90300|F
 
 ```
-> 输出：
+> 5.输入完成后，回车（两次），输出如下：
 ```
 Reminder
 ==================
@@ -66,8 +68,28 @@ Porsche: 1 (CAR0001)
 BYD: 1 (CAR0004)
 Ford: 1 (CAR0009)
 ```
+> 6.运行测试文件**/test/CarTest.py**和**/test/ManageTest.py**,使用 **ctrl** + **shift** + **f10** 或右键**Run**
 
-### **方法2**
-> 使用pycharm打开该工程，使用**ctrl**+**shift**+**f10**运行工程，然后在IDE的运行端中进行输入，同方法1
+> 7.样例运行截图
+- SAMPLE 1
+@import "sample1.png" {title="示例1"}
+- SAMPLE 2
+@import "sample2.png"
 
-## [github地址](https://github.com/legite/time2buynewcar "thoughtworks homework")
+
+## **系统流程图**
+```mermaid
+graph TD
+    A[开始] --> B((输入input))
+    B --head line--> C[日期date]
+    B --> D((Str2Car))
+    D --> E[汽车信息cars]
+    E --> F((Manage))
+    C --> F
+    F --> G[汽车管理M]
+    G --show--> H[信息展示]
+```
+
+##
+
+## [**github地址**](https://github.com/legite/time2buynewcar "thoughtworks homework")
