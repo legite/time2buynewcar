@@ -72,9 +72,9 @@ Ford: 1 (CAR0009)
 
 > 7.样例运行截图
 - SAMPLE 1
-@import "sample1.png" {title="示例1"}
+![](sample1.png)
 - SAMPLE 2
-@import "sample2.png"
+![](sample2.png)
 
 
 ## **系统流程图**
