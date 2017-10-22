@@ -8,7 +8,8 @@ ss = ['CAR0001|2025/04/05|Porsche|10000|F',
       'CAR0004|2027/11/01|BYD|23000|T']
 date = '2030/09/01'
 
-class test_manager(unittest.TestCase):
+
+class TestManager(unittest.TestCase):
     # 初始化测试
     def test_init(self):
         cars = []

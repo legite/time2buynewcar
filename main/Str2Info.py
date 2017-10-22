@@ -1,11 +1,11 @@
 import datetime
 
-STD = {True:[365 * 3, 3, 3], False:[365 * 6, 12, 6]}                      # 寿命及定期保养标准
+STD = {True:[365 * 3, 3, 3, 3], False:[365 * 6, 12, 6, 3]}                      # 寿命及定期保养标准
 
 
 # 定义字符串转车辆类
 class Str2Car(object):
-    __slots__ = ('id', 'Date', 'brand', 'dis', 'fix')
+    __slots__ = ('id', 'Date', 'brand', 'dis', 'fix', 'ps')
 
     # 初始化车辆信息：编号id，购买日期date，品牌brand，公里数dis,是否检修fix
     def __init__(self, str):
@@ -16,6 +16,10 @@ class Str2Car(object):
         self.dis = int(ss[3])
         Fix = {'T': True, 'F':False}
         self.fix = Fix[ss[4]]
+        if len(ss) == 6:
+            self.ps = Fix[ss[5]]
+        else:
+            self.ps = False
 
     # 保养及报废提醒
     def reminder(self, date):
@@ -42,23 +46,31 @@ class Str2Car(object):
         else:
             if (d2.year - d1.year) < 3:
                 m = (d2.year - d1.year) * 12 + d2.month - d1.month
-                if (m % STD[self.fix][1]) == 0:
+                if self.ps == True:
+                    x = 3
+                else:
+                    x = 1
+                if (m % STD[self.fix][x]) == 0:
                     if (d2.day - d1.day) <= 0:
                         return 2                                         # 定期保养
                     else:
                         return 3                                         # 正常
-                elif (m + 1) % STD[self.fix][1] == 0:
+                elif (m + 1) % STD[self.fix][x] == 0:
                     return 2                                             # 定期保养
                 else:
                     return 3                                             # 正常
             else:
                 m = (d2.year - d1.year) * 12 + d2.month - d1.month
-                if (m % STD[self.fix][2]) == 0:
+                if self.ps == True:
+                    x = 3
+                else:
+                    x = 2
+                if (m % STD[self.fix][x]) == 0:
                     if (d2.day - d1.day) <= 0:
                         return 2                                         # 定期保养
                     else:
                         return 3                                         # 正常
-                elif (m + 1) % STD[self.fix][2] == 0:
+                elif (m + 1) % STD[self.fix][x] == 0:
                     return 2                                             # 定期保养
                 else:
                     return 3                                             # 正常
